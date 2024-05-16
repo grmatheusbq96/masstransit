@@ -10,9 +10,13 @@ public static class ServiceExtensions
     {
         //services.AddSingletonDecorator<IClasseBase, ClasseBase, ClasseBaseDecoratorPrimeira, ClasseBaseDecoratorSegunda>();
 
-        services.AddKeyedSingleton<IClasseBase, ClasseBase>("original");
-        services.AddKeyedSingleton<IClasseBase, ClasseBaseDecoratorPrimeira>("primeira");
-        services.AddKeyedSingleton<IClasseBase, ClasseBaseDecoratorSegunda>("segunda");
+        services.AddSingleton<IServicoUm, ServicoUm>();
+        services.AddSingleton<IServicoDois, ServicoDois>();
+
+
+        //services.AddKeyedSingleton<IClasseBase, ClasseBase>("original");
+        //services.AddKeyedSingleton<IClasseBase, ClasseBaseDecoratorPrimeira>("primeira");
+        //services.AddKeyedSingleton<IClasseBase, ClasseBaseDecoratorSegunda>("segunda");
 
         return services;
     }
