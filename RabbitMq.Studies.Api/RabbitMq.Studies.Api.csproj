@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\RabbitMq.Studies.Service\RabbitMq.Studies.Service.csproj" />
   </ItemGroup>
 
 </Project>
